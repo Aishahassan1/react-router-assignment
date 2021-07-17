@@ -1,11 +1,13 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 
-function Tasks (props) {
+function Tasks () {
   const [tasks, setTasks] = useState([])
   
   const getTasks = async() => {
-    const response = await axios.get(`https://mod2-api.herokuapp.com/owner/${props.owner.id}/task`)
+    // Use router props to get access to the owner and use its id below
+    // to query tasks for the owner
+    const response = await axios.get(`https://mod2-api.herokuapp.com/owner/1/task`)
     setTasks(response.data)
   }
 
@@ -15,8 +17,10 @@ function Tasks (props) {
 
   return (
     <>
-      <h2>Tasks for: {props.owner.name}</h2>
-      {tasks.map((task) => <li key={`task-${task.id}`}>{task.title}</li>)}
+      <h2>Tasks for: </h2>
+      <ul>
+        {tasks.map((task) => <li key={`task-${task.id}`}>{task.title}</li>)}
+      </ul>
     </>
   )
 }

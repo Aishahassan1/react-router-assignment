@@ -1,6 +1,6 @@
 [<img src="assets/images/su-logo.png" alt="Skills Union Logo" height="80px" />](https://www.skillsunion.com/)
 
-# React and API: Assignment
+# React Router: Assignment
 You have approximately 1.5 hours to complete this lab.
 
 ## Instructions

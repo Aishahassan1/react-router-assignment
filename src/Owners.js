@@ -18,8 +18,9 @@ function Owners (props) {
     <>
       <h2>Owners</h2>
       <ul>
+        {/* Each owner should link to /owners/:id */}
         {owners.map((owner) => 
-          <li onClick={() => props.setOwner(owner)} key={owner.id}>
+          <li key={owner.id}>
             {owner.name}
           </li>
         )}
