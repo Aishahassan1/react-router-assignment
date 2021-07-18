@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-function Owners (props) {
+function Owners () {
 
   const [owners, setOwners] = useState([])
 
