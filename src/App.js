@@ -10,7 +10,7 @@ Please add routes to this SPA
 1. Please change browser url to /owners/:id when a user clicks on 
 a particular owners name.
 
-2. When a user has clicked on one item we should render title and descriptio for a particular task.
+2. When a user has clicked on one item we should render title and description for a particular task.
 
 Please consult the documentation for our api
 https://documenter.getpostman.com/view/15604882/TzRNGAqj#de0f848f-3ca7-4cea-97ae-b6541bfa1195
