@@ -19,7 +19,7 @@ Only when a user is on url /owners/:id they should see the tasks
 which belong to that owner,
 
 React router docs
-[CodeSandbox](https://reactrouter.com/web/api/    )
+https://reactrouter.com/docs/en/v6/getting-started/tutorial
 */
 
 function App() {
