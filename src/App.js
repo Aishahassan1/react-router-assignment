@@ -1,21 +1,22 @@
 import './App.css';
 import Owners from './Owners';
 import Tasks from './Tasks'
-
+import ownersTasks from "./ownersTasks"
 
 /*
-Please add routes to this SPA
+Please add routes to this SPA - you need to install react-router-dom package
+npm install react-router-dom
+
+The data has been imported from ownersTasks file
 
 1.Only when user is on url /owners we should render Owners component
 
-2. Please change browser url to /owners/:id when a user clicks on 
-a particular owners name.
+2. Please change browser url to /owners/:id (:id should be replaced with matching id of the owner)
+when a user clicks on a particular owners name.
 
-3.Only when a user is on url /owners/:id they should see the tasks
-whoch belong to that owner. 
-
-Please consult the documentation for our api
-https://documenter.getpostman.com/view/15604882/TzRNGAqj#de0f848f-3ca7-4cea-97ae-b6541bfa1195
+3. At the moment we are rendering first owners tasks. 
+Only when a user is on url /owners/:id they should see the tasks
+which belong to that owner,
 
 React router docs
 [CodeSandbox](https://reactrouter.com/web/api/    )
@@ -25,8 +26,8 @@ function App() {
   return (
     <div className="App">
       <h1>Todo App</h1>
-      <Tasks />
-      <Owners />
+      <Tasks tasks={ownersTasks[0].tasks} />
+      <Owners owners={ownersTasks} />
     </div>
   );
 }
