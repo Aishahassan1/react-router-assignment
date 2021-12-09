@@ -2,6 +2,7 @@ import './App.css';
 import Owners from './Owners';
 import Tasks from './Tasks'
 import ownersTasks from "./ownersTasks"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 /*
 Please add routes to this SPA - you need to install react-router-dom package
@@ -25,9 +26,13 @@ https://reactrouter.com/docs/en/v6/getting-started/tutorial
 function App() {
   return (
     <div className="App">
+      <BrowserRouter>
       <h1>Todo App</h1>
-      <Tasks tasks={ownersTasks[0].tasks} />
-      <Owners owners={ownersTasks} />
+      {/* <Tasks tasks={ownersTasks[0].tasks} /> */}
+      <Routes>
+      <Route path="/owners/:id" element={<Owners owners={ownersTasks} />}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
